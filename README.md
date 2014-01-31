@@ -1,5 +1,15 @@
-allows to register expected steps, put a timeout and acknowledge them
-  
+
+StepTrace
+=========
+
+StepTrace is a node.js library that allows you to register expected steps, put a timeout and acknowledge them.
+You get notified when one of the steps times out and can take appropriate action.
+
+One of the use cases is if you have multiple asynchronous actions that need to be taken one after the other but you need
+to know if one of the steps takes longer than expected. You can delegate the timeout verifications to StepTrace.
+StepTrace will tell you what step failed.
+
+
 Examples
 ========
 
@@ -15,7 +25,6 @@ Examples
       // this will never be called because step2 is acknowledged before the timeout expires.
     })
     st.acknowledge('step2');
-
 
     // steps names are unique and you can overwrite an existing step
     st.step('step3', 1000, function() {

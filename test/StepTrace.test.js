@@ -91,13 +91,13 @@ describe('StepTrace', function() {
 
   });
 
-  it('global listener should be invoked when a step times out', function(done) {
+  it('a global listener should be invoked when a step times out', function(done) {
     var st = new StepTrace();
 
     var start = Date.now();
     st.on('timeout', function(step, timeout) {
 
-      assert.ok(Date.now() >= (start + 100), 'step timed out too early');
+      assert.ok(Date.now() >= (start + 100), 'step 1 timed out too early');
 
       assert.equal(step, 'step1');
       assert.equal(timeout, 100);
