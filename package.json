@@ -1,0 +1,16 @@
+{
+  "name": "steptrace",
+  "version": "0.1.0",
+  "description": "ensure asynchronous steps don't timeout and keep an history of these steps",
+  "main": "StepTrace.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "step",
+    "timeout"
+  ],
+  "git": "git@github.com:nherment/steptrace.git",
+  "author": "Nicolas Herment <nherment@gmail.com>",
+  "license": "MIT License"
+}
